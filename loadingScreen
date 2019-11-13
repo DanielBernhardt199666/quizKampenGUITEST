@@ -1,0 +1,49 @@
+package com.company;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class loadingScreen {
+    private JPanel panel1;
+    private JTextField USER1;
+    private JProgressBar progressBar2;
+    private JButton button1;
+    private JProgressBar progressBar1;
+    private JButton button2;
+    private JTextField USER2;
+    private JButton PLAYButton;
+    private JTextField USER1TextField;
+    private JLabel label;
+    private JLabel label1;
+
+
+    public loadingScreen() {
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button2.setBackground(Color.red);
+
+            }
+        });
+
+        PLAYButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
+
+
+        public static void main (String[]args){
+            JFrame frame = new JFrame();
+            frame.setContentPane(new loadingScreen().panel1);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            frame.setLocationRelativeTo(null);
+            frame.pack();
+            frame.setVisible(true);
+        }
+    }
