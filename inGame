@@ -1,0 +1,49 @@
+package com.company;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class inGame extends JFrame {
+    inGame() {
+
+        JFrame frame = new JFrame("QuizKampen!");
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        JButton button1, button2, button3, button4;
+        JLabel question = new JLabel("Question:");
+        question.setFont(new Font("SansSerif", Font.ITALIC, 20));
+        JLabel label = new JLabel("Points: ");
+        label.setFont(new Font("SansSerif", Font.ITALIC, 20));
+        button1 = new JButton("Answer 1");
+        button1.setFont(new Font("Monospaced", Font.BOLD, 20));
+        button1.setBackground(Color.darkGray);
+        button1.setForeground(Color.WHITE);
+        button2 = new JButton("Answer 2");
+        button2.setFont(new Font("Monospaced", Font.BOLD, 20));
+        button2.setBackground(Color.darkGray);
+        button2.setForeground(Color.WHITE);
+        button3 = new JButton("Answer 3");
+        button3.setFont(new Font("Monospaced", Font.BOLD, 20));
+        button3.setBackground(Color.darkGray);
+        button3.setForeground(Color.WHITE);
+        button4 = new JButton("Answer 4");
+        button4.setFont(new Font("Monospaced", Font.BOLD, 20));
+        button4.setBackground(Color.darkGray);
+        button4.setForeground(Color.WHITE);
+        frame.add(question);
+        frame.add(label);
+        frame.add(button1);
+        frame.add(button2);
+        frame.add(button3);
+        frame.add(button4);
+
+        frame.setLayout(new GridLayout(3, 2));
+        frame.setSize(600, 600);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new inGame();
+    }
+}
